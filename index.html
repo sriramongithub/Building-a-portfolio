@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT SHARE -->
+
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet">
+
+    <title>Dev Server</title>
+  </head>
+  <body>
+    <header class="header container">
+      <nav>
+        <ul class="header__menu">
+          <li>
+            <a class="header__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="header__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="header__link" href="#contact">Contact</a>
+          </li>
+          <li class="header__line"></li>
+          <li>
+            <button id = "theme-toggle" class="header__sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="header__resume btn"  href="https://drive.google.com/file/d/1ITRS7lmPi-mUWKNI0Dhz7rP5HPm-LNE5/view?usp=sharing" target="_blank" >Resume</a>
+          </li>
+        </ul>
+        <button class="header__bars">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+          </svg>
+          
+        </button>
+      </nav>
+    </header>
+    <!-- mobile navigation -->
+
+    <div class="mobile-nav">
+      <nav>
+        <ul class="mobile__nav-menu">
+          <li>
+            <a class="mobile-nav__link" href="#about">About</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#featured">Work</a>
+          </li>
+          <li>
+            <a class="mobile-nav__link" href="#contact">Contact</a>
+          </li>
+          <li class="mobile-nav__link-line"></li>
+          <li>
+            <button id = "theme-toggle" class="mobile-nav__sun">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+                <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <a class="mobile-nav__btn btn" href="https://drive.google.com/file/d/1ITRS7lmPi-mUWKNI0Dhz7rP5HPm-LNE5/view?usp=sharing" target="_blank" >Resume</a>
+          </li>
+        </ul>
+        <button class="header__bars">          
+        </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- end of mobile navigation -->
+    <main>
+
+      <section class="hero container">
+
+        <img class = "hero__img" src="/DP.jpg" alt="Profile picture">
+        <h2 class="hero__subtitle">Hi, I'm Sriram 👋</h2>
+        <h1 class="hero__title">Java<br>Programmer</h1>
+        <p class = "hero__description">
+          An <strong>Engineering graduate</strong> , I am passionate about leveraging the power of the Java programming language to develop innovative and efficient solutions.
+         </p>
+        <a class = "hero__btn btn" href="mailto:sriramnewly@gmail.com" target="_blank">Reach out</a>
+
+      </section>
+
+      <section id = "about" class="about container section">
+
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p class="about__description">
+            An <strong>Engineering graduate</strong> constantly learning and adopting new technologies always question everything around him to extend his creativity
+          <p class="about__description">
+            People who know me say I'm obsessed, that's fair, I am very driven and love
+            learning new things and new technologies.
+          </p>
+          <p class="about__description">
+            Here is my <a href="https://leetcode.com/sriramonleetcode/" target="_blank" >Leetcode progress</a>
+            and grasped some of Java concepts in <a href="https://hackerrank.com/profile/sriramnewly" target="_blank">Hackerrank platform.</a>
+          </p>
+          <hr class="about__hr">
+          <h3 class="about__subtitle">Skills</h3>
+          <div class="about__ul-container">
+            <ul class="about__ul">
+              <li class="about__list">HTML</li>
+              <li class="about__list">CSS</li>
+              <li class="about__list">JavaScript</li>
+            </ul>
+            <ul class="about__ul">
+              <li class="about__list">SQL and PowerBI</li>
+              <li class="about__list">C# and Python</li>
+              <li class="about__list">Git Hub Version Control</li>
+            </ul>
+            </div>
+        </div>
+        <div class="about__img-wrapper">
+          <img class="abt__img lazy loading" src="https://fakeimg.pl/736" data-src="/John.jpg"  alt="Profile picture">
+        </div>
+
+      </section>
+
+      <section id="featured" class="featured container section">
+        <h3 class="featured__subtitle">Projects worked on </h3>
+        <div class="featured__wrapper">
+
+          <h2 class="featured__title">Kora Karnival</h2>
+          <a class="featured__link" href="https://korafoodstreet.com/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+            </svg>
+            
+          </a>
+        </div>
+        <p class="featured__description">
+          Provided essential support in managing and maintaining the company's IT infrastructure,
+including servers, networks, and workstations.
+        </p>
+        <p class="featured__description">
+          Assisted in configuring, installing, and troubleshooting hardware and software systems,
+ensuring optimal functionality across the organization.
+
+        </p>
+
+        <div class="featured__info-container">
+          <div>
+            <h3 class="featured__label">Skills Acquired</h3>
+            <ul class="featured__tech-stack">
+              <li class="featured__info">Patience</li>
+              <li class="featured__info">OS Installation</li>
+              <li class="featured__info">Storage partition</li>
+              <li class="featured__info">Troubleshooting</li>
+              <li class="featured__info">understanding of real-time servers</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="featured__label">Project type</h3>
+            <p class="featured__info">Product Based</p>
+          </div>
+          <div>
+            <h3 class="featured__label">Timeline</h3>
+            <p class="featured__info">October 2023 - December 2023</p>
+          </div>
+        </div>
+
+        <div class="featured__img-container">
+
+
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://fakeimg.pl/1920x968" data-src="/img1.jpeg" alt="Slaying the Dragon hero">
+          </div>
+          
+          <div class="featured__img-wrapper">
+            <img class="lazy loading" src="https://fakeimg.pl/1920x968" data-src="/img2.jpeg" alt="Slaying the Dragon courses">
+          </div>
+          
+
+        </div>
+        
+      </section>
+
+      <section class="work container-section">
+
+        <h2 class="work__title">Mini Web Projects</h2>
+        <p class="work__description">
+          Here is some of My work and Knowledge acquired during Web Development Bootcamp 
+        </p>
+        <div class="work__container">
+          <!-- Project1 -->
+          <h3 class="work__project-title">Meme Generator</h3>
+          <div class="work__img-wrapper work__image1">
+            <h3 class="work__project-subtitle">Meme Generator</h3>
+            <img class="lazy loading" src="https://fakeimg.pl/1920x968" data-src="/meme.png" alt="wax1">
+          </div>
+          <div class="work__project work__content1" >
+            
+
+            <p class="work__project-description1">
+              Meme Generator done using API and Basic HTML and CSS
+            </p>
+            <p class="work__project-description2">
+              I did this mini project to understand the concept of API and its features.
+            </p>
+            <a class = "btn work__project-btn" href="https://github.com/sriramongithub/Personal-Projects/tree/main/Meme%20Genarator" target="_blank"> Source code </a>
+          </div>
+          
+          <!-- Project2 -->
+          <h3 class="work__project-title">Dice Game</h3>
+          <div class="work__img-wrapper work__image2">
+            <h3 class="work__project-subtitle">Dice Game</h3>
+            <img class="lazy loading" src="https://fakeimg.pl/1920x968" data-src="/dice.png" alt="wax2">
+          </div>
+          <div class="work__project work__content2" >
+          
+            <p class="work__project-description1">
+              Dice game done by using HTML CSS JavaScript
+            </p>
+            <p class="work__project-description2">
+                When the website is loaded it gives a random dice numbers, so you and your friend can roll a dice and decide who wins.
+            </p>
+            <a class = "btn work__project-btn" href="https://github.com/sriramongithub/Personal-Projects/tree/main/Dice%20game" target="_blank">Source Code</a>
+          </div>
+
+          <!-- Project3 -->
+            <h3 class="work__project-title">Simon Game</h3>
+            <div class="work__img-wrapper work__image3">
+              <h3 class="work__project-subtitle">Simon Game</h3>
+              <img class="lazy loading" src="https://fakeimg.pl/1920x968" data-src="/simon.png" alt="wax3">
+            </div>
+            <div class="work__project work__content3" >
+              <p class="work__project-description1">
+                A very famous game done using push function that pushes into a variable containing arrays so it remembers all the colors from beginning to end. 
+              </p>
+              <p class="work__project-description2">
+                Got some deep understanding about DOM functions and grasped some concepts along the way 
+              </p>
+              <a class = "btn work__project-btn" href="https://github.com/sriramongithub/Personal-Projects/tree/main/Simon%20Game" target="_blank">Source Code</a>
+            </div>
+  
+            <!-- Project4 -->
+            <h3 class="work__project-title">Drum Kit</h3>
+            
+            <div class="work__img-wrapper work__image4">
+            <h3 class="work__project-subtitle">Drum Kit</h3>
+
+            <img class="lazy loading" src="https://fakeimg.pl/1920x968" data-src="/drum.png" alt="wax4">
+            </div>
+            <div class="work__project work__content4" >
+            <p class="work__project-description1">
+              Drum Kit is a music website corresponding to the keys
+            </p>
+            <p class="work__project-description2">
+              Learned about event Listeners and was introduced to methods when starting as programmer.
+            </p>
+            <a class = "btn work__project-btn" href="https://github.com/sriramongithub/Personal-Projects/tree/main/Drum%20Kit" target="_blank">Source Code</a>
+            </div>
+        </div>                
+      </section>
+
+      <section id="contact" class="contact container section">
+        <h2 class="contact__title">Get In Contact</h2>
+        <p class="contact__description">
+          Hi, my inbox is always open so feel free to reach out and I will get back to you 
+          as soon as possible.
+        </p>
+        <a class = "contact__btn btn" href="mailto:sriramnewly@gmail.com" target="_blank">Reach Out</a>
+      </section>
+
+    </main>
+    <footer class="footer__container-section">
+      <h3 class="footer__title">~ Sriram JR ~</h3>
+    </footer>
+  <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
